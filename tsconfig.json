@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        // Language and Environment
+        "target": "es5", //타입스크립트 컴파일 결과물
+        "lib": [ //타입스크립트 컴파일 시 포함될 버전 명시
+            "DOM",
+            "ES2015",
+            "ES2016",
+            "ES2017",
+            "ES2018",
+            "ES2019",
+            "ES2020"
+        ],
+        "jsx": "react", //jsx 코드 생성 설정
+        //Modules
+        "module": "ESNext", // 컴파일된 결과물이 사용하게 될 module 방식
+        "moduleResolution": "node", // 모듈 해석 방법 설정 (node / TypeScript)
+        "allowJs": true, //ts에서 js import하도록 허용
+        "outDir": "./dist", // 해당 디렉토리로 결과 구조 내보냄
+        "isolatedModules": true,
+        "resolveJsonModule": true, // json 파일 import 처리
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        //TYPE CHECKING
+        "strict": true,
+        "noImplicitAny": true,
+        //option
+        "removeComments": false, //컴파일 시 주석 삭제 처리 (번들사이즈 경량화 용 )
+        "sourceMap": true, // .MAP 파일 생성 (TS 코드 확인 용)
+        //path
+        "baseUrl": "./", // 기준점 세팅
+        "paths": { // path 세팅
+            "@components/*": [
+                "components/*"
+            ],
+            "@pages/*": [
+                "pages/*"
+            ]
+        },
+        "skipLibCheck": true, // 라이브러리 파일 타입 검사 skip (컴파일 속도 향상)
+    },
+    // 컴파일 시 포함 경로
+    "include": [
+        "./src/**/*"
+    ],
+    // 컴파일 시 불포함 경로
+    "exclude": []
+}
